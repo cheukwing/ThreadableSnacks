@@ -61,6 +61,12 @@ class LockyPhilo implements Runnable {
       } finally {
         left.unlock();
       }
+
+      try {
+        Thread.sleep(500);
+      } catch (InterruptedException e) {
+        e.printStackTrace();
+      }
     }
   }
 }
