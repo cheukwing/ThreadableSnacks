@@ -1,9 +1,9 @@
-import java.util.concurrent.ArrayBlockingQueue;
-import java.util.concurrent.BlockingQueue;
+import java.util.ArrayDeque;
+import java.util.Queue;
 import java.util.stream.IntStream;
 
 public class ProducerConsumer {
-  private BlockingQueue<String> queue = new ArrayBlockingQueue<>(10);
+  private Queue<String> queue = new ArrayDeque<>(10);
 
   synchronized void add(String item) {
     while (queue.size() == 10) {
